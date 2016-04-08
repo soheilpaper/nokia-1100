@@ -1,0 +1,12 @@
+main
+	nlcd_Init
+		nlcd_SendByte
+		nlcd_Clear
+			nlcd_SendByte
+	nlcd_Print
+		nlcd_Putc
+			nlcd_SendByte
+			HWMul_16x16
+	nlcd_GotoXY
+		nlcd_SendByte
+	__CC2DW

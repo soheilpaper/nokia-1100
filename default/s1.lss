@@ -1,0 +1,727 @@
+
+s1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000012  00800100  0000066c  000006e0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000066c  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .debug_aranges 00000020  00000000  00000000  000006f2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_pubnames 000000cb  00000000  00000000  00000712  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   0000046b  00000000  00000000  000007dd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 00000190  00000000  00000000  00000c48  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   00000424  00000000  00000000  00000dd8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  000000c0  00000000  00000000  000011fc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    000001b2  00000000  00000000  000012bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    0000018a  00000000  00000000  0000146e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000090  00000000  00000000  000015f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 d6 01 	jmp	0x3ac	; 0x3ac <__ctors_end>
+   4:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+   8:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+   c:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  10:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  14:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  18:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  1c:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  20:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  24:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  28:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  2c:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  30:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  34:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  38:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  3c:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  40:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  44:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  48:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  4c:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  50:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  54:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  58:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  5c:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  60:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  64:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  68:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  6c:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  70:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  74:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  78:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  7c:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  80:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  84:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+  88:	0c 94 ed 01 	jmp	0x3da	; 0x3da <__bad_interrupt>
+
+0000008c <nlcd_Font>:
+  8c:	00 00 00 00 00 00 00 5f 00 00 00 07 00 07 00 14     ......._........
+  9c:	7f 14 7f 14 24 2a 7f 2a 12 23 13 08 64 62 36 49     ....$*.*.#..db6I
+  ac:	55 22 50 00 05 03 00 00 00 1c 22 41 00 00 41 22     U"P......."A..A"
+  bc:	1c 00 08 2a 1c 2a 08 08 08 3e 08 08 00 50 30 00     ...*.*...>...P0.
+  cc:	00 08 08 08 08 08 00 30 30 00 00 20 10 08 04 02     .......00.. ....
+  dc:	3e 51 49 45 3e 00 42 7f 40 00 42 61 51 49 46 21     >QIE>.B.@.BaQIF!
+  ec:	41 45 4b 31 18 14 12 7f 10 27 45 45 45 39 3c 4a     AEK1.....'EEE9<J
+  fc:	49 49 30 01 71 09 05 03 36 49 49 49 36 06 49 49     II0.q...6III6.II
+ 10c:	29 1e 00 36 36 00 00 00 56 36 00 00 00 08 14 22     )..66...V6....."
+ 11c:	41 14 14 14 14 14 41 22 14 08 00 02 01 51 09 06     A.....A".....Q..
+ 12c:	32 49 79 41 3e 7e 11 11 11 7e 7f 49 49 49 36 3e     2IyA>~...~.III6>
+ 13c:	41 41 41 22 7f 41 41 22 1c 7f 49 49 49 41 7f 09     AAA".AA"..IIIA..
+ 14c:	09 01 01 3e 41 41 51 32 7f 08 08 08 7f 00 41 7f     ...>AAQ2......A.
+ 15c:	41 00 20 40 41 3f 01 7f 08 14 22 41 7f 40 40 40     A. @A?...."A.@@@
+ 16c:	40 7f 02 04 02 7f 7f 04 08 10 7f 3e 41 41 41 3e     @..........>AAA>
+ 17c:	7f 09 09 09 06 3e 41 51 21 5e 7f 09 19 29 46 46     .....>AQ!^...)FF
+ 18c:	49 49 49 31 01 01 7f 01 01 3f 40 40 40 3f 1f 20     III1.....?@@@?. 
+ 19c:	40 20 1f 7f 20 18 20 7f 63 14 08 14 63 03 04 78     @ .. . .c...c..x
+ 1ac:	04 03 61 51 49 45 43 00 00 7f 41 41 02 04 08 10     ..aQIEC...AA....
+ 1bc:	20 41 41 7f 00 00 04 02 01 02 04 40 40 40 40 40      AA........@@@@@
+ 1cc:	00 01 02 04 00 20 54 54 54 78 7f 48 44 44 38 38     ..... TTTx.HDD88
+ 1dc:	44 44 44 20 38 44 44 48 7f 38 54 54 54 18 08 7e     DDD 8DDH.8TTT..~
+ 1ec:	09 01 02 08 14 54 54 3c 7f 08 04 04 78 00 44 7d     .....TT<....x.D}
+ 1fc:	40 00 20 40 44 3d 00 00 7f 10 28 44 00 41 7f 40     @. @D=....(D.A.@
+ 20c:	00 7c 04 18 04 78 7c 08 04 04 78 38 44 44 44 38     .|...x|...x8DDD8
+ 21c:	7c 14 14 14 08 08 14 14 18 7c 7c 08 04 04 08 48     |........||....H
+ 22c:	54 54 54 20 04 3f 44 40 20 3c 40 40 20 7c 1c 20     TTT .?D@ <@@ |. 
+ 23c:	40 20 1c 3c 40 30 40 3c 44 28 10 28 44 0c 50 50     @ .<@0@<D(.(D.PP
+ 24c:	50 3c 44 64 54 4c 44 00 08 36 41 00 00 00 7f 00     P<DdTLD..6A.....
+ 25c:	00 00 41 36 08 00 02 01 02 04 02 08 1c 2a 08 08     ..A6.........*..
+ 26c:	7e 11 11 11 7e 7f 49 49 49 33 7f 49 49 49 36 7f     ~...~.III3.III6.
+ 27c:	01 01 01 03 e0 51 4f 41 ff 7f 49 49 49 49 77 08     .....QOA..IIIIw.
+ 28c:	7f 08 77 49 49 49 49 36 7f 10 08 04 7f 7c 21 12     ..wIIII6.....|!.
+ 29c:	09 7c 7f 08 14 22 41 20 41 3f 01 7f 7f 02 0c 02     .|..."A A?......
+ 2ac:	7f 7f 08 08 08 7f 3e 41 41 41 3e 7f 01 01 01 7f     ......>AAA>.....
+ 2bc:	7f 09 09 09 06 3e 41 41 41 22 01 01 7f 01 01 27     .....>AAA".....'
+ 2cc:	48 48 48 3f 1c 22 7f 22 1c 63 14 08 14 63 7f 40     HHH?.".".c...c.@
+ 2dc:	40 40 ff 07 08 08 08 7f 7f 40 7f 40 7f 7f 40 7f     @@.......@.@..@.
+ 2ec:	40 ff 01 7f 48 48 30 7f 48 30 00 7f 7f 48 48 30     @...HH0.H0...HH0
+ 2fc:	00 22 41 49 49 3e 7f 08 3e 41 3e 46 29 19 09 7f     ."AII>..>A>F)...
+ 30c:	20 54 54 54 78 3c 4a 4a 49 31 7c 54 54 28 00 7c      TTTx<JJI1|TT(.|
+ 31c:	04 04 04 0c e0 54 4c 44 fc 38 54 54 54 08 6c 10     .....TLD.8TTT.l.
+ 32c:	7c 10 6c 44 44 54 54 28 7c 20 10 08 7c 78 42 24     |.lDDTT(| ..|xB$
+ 33c:	12 78 7c 10 28 44 00 20 44 3c 04 7c 7c 08 10 08     .x|.(D. D<.||...
+ 34c:	7c 7c 10 10 10 7c 38 44 44 44 38 7c 04 04 04 7c     ||...|8DDD8|...|
+ 35c:	7c 14 14 14 08 38 44 44 44 44 04 04 7c 04 04 0c     |....8DDDD..|...
+ 36c:	50 50 50 3c 18 24 7e 24 18 44 28 10 28 44 7c 40     PPP<.$~$.D(.(D|@
+ 37c:	40 40 fc 0c 10 10 10 7c 7c 40 7c 40 7c 7c 40 7c     @@.....||@|@||@|
+ 38c:	40 fc 04 7c 50 50 20 7c 50 20 00 7c 7c 50 50 20     @..|PP |P .||PP 
+ 39c:	00 28 44 54 54 38 7c 10 38 44 38 08 54 34 14 7c     .(DTT8|.8D8.T4.|
+
+000003ac <__ctors_end>:
+ 3ac:	11 24       	eor	r1, r1
+ 3ae:	1f be       	out	0x3f, r1	; 63
+ 3b0:	cf ef       	ldi	r28, 0xFF	; 255
+ 3b2:	d0 e1       	ldi	r29, 0x10	; 16
+ 3b4:	de bf       	out	0x3e, r29	; 62
+ 3b6:	cd bf       	out	0x3d, r28	; 61
+
+000003b8 <__do_copy_data>:
+ 3b8:	11 e0       	ldi	r17, 0x01	; 1
+ 3ba:	a0 e0       	ldi	r26, 0x00	; 0
+ 3bc:	b1 e0       	ldi	r27, 0x01	; 1
+ 3be:	ec e6       	ldi	r30, 0x6C	; 108
+ 3c0:	f6 e0       	ldi	r31, 0x06	; 6
+ 3c2:	00 e0       	ldi	r16, 0x00	; 0
+ 3c4:	0b bf       	out	0x3b, r16	; 59
+ 3c6:	02 c0       	rjmp	.+4      	; 0x3cc <__do_copy_data+0x14>
+ 3c8:	07 90       	elpm	r0, Z+
+ 3ca:	0d 92       	st	X+, r0
+ 3cc:	a2 31       	cpi	r26, 0x12	; 18
+ 3ce:	b1 07       	cpc	r27, r17
+ 3d0:	d9 f7       	brne	.-10     	; 0x3c8 <__do_copy_data+0x10>
+ 3d2:	0e 94 17 03 	call	0x62e	; 0x62e <main>
+ 3d6:	0c 94 34 03 	jmp	0x668	; 0x668 <_exit>
+
+000003da <__bad_interrupt>:
+ 3da:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000003de <nlcd_SendByte>:
+// DATA_LCD_MODE - transfer data
+// C: the value of the transmitted bytes
+void nlcd_SendByte(char mode,unsigned char c)
+{
+	unsigned char i;
+    CS_LCD_RESET;
+ 3de:	ae 98       	cbi	0x15, 6	; 21
+    SCLK_LCD_RESET;
+ 3e0:	ac 98       	cbi	0x15, 4	; 21
+   
+    if(mode) SDA_LCD_SET;
+ 3e2:	88 23       	and	r24, r24
+ 3e4:	11 f0       	breq	.+4      	; 0x3ea <nlcd_SendByte+0xc>
+ 3e6:	ad 9a       	sbi	0x15, 5	; 21
+ 3e8:	01 c0       	rjmp	.+2      	; 0x3ec <nlcd_SendByte+0xe>
+	 else	 SDA_LCD_RESET;
+ 3ea:	ad 98       	cbi	0x15, 5	; 21
+    
+    SCLK_LCD_SET;
+ 3ec:	ac 9a       	sbi	0x15, 4	; 21
+ 3ee:	90 e0       	ldi	r25, 0x00	; 0
+    can be achieved.
+*/
+void
+_delay_loop_1(uint8_t __count)
+{
+	__asm__ volatile (
+ 3f0:	2a e5       	ldi	r18, 0x5A	; 90
+
+    for(i=0;i<8;i++)
+    {
+    	SCLK_LCD_RESET;
+ 3f2:	ac 98       	cbi	0x15, 4	; 21
+
+        if(c & 0x80) SDA_LCD_SET;
+ 3f4:	67 ff       	sbrs	r22, 7
+ 3f6:	02 c0       	rjmp	.+4      	; 0x3fc <nlcd_SendByte+0x1e>
+ 3f8:	ad 9a       	sbi	0x15, 5	; 21
+ 3fa:	01 c0       	rjmp	.+2      	; 0x3fe <nlcd_SendByte+0x20>
+         else	     SDA_LCD_RESET;
+ 3fc:	ad 98       	cbi	0x15, 5	; 21
+
+        SCLK_LCD_SET;
+ 3fe:	ac 9a       	sbi	0x15, 4	; 21
+ 400:	82 2f       	mov	r24, r18
+ 402:	8a 95       	dec	r24
+ 404:	f1 f7       	brne	.-4      	; 0x402 <nlcd_SendByte+0x24>
+    if(mode) SDA_LCD_SET;
+	 else	 SDA_LCD_RESET;
+    
+    SCLK_LCD_SET;
+
+    for(i=0;i<8;i++)
+ 406:	9f 5f       	subi	r25, 0xFF	; 255
+ 408:	98 30       	cpi	r25, 0x08	; 8
+ 40a:	11 f0       	breq	.+4      	; 0x410 <nlcd_SendByte+0x32>
+
+        if(c & 0x80) SDA_LCD_SET;
+         else	     SDA_LCD_RESET;
+
+        SCLK_LCD_SET;
+        c <<= 1;
+ 40c:	66 0f       	add	r22, r22
+ 40e:	f1 cf       	rjmp	.-30     	; 0x3f2 <nlcd_SendByte+0x14>
+        
+		_delay_us(NLCD_MIN_DELAY);	// ***** !!!!! 270 - Minimum delay at which the work my LCD-controller
+    }
+
+    CS_LCD_SET;
+ 410:	ae 9a       	sbi	0x15, 6	; 21
+}
+ 412:	08 95       	ret
+
+00000414 <nlcd_Clear>:
+}
+
+//******************************************************************************
+// Clear the screen
+void nlcd_Clear(void)
+{
+ 414:	cf 93       	push	r28
+ 416:	df 93       	push	r29
+	unsigned int i;
+	nlcd_SendByte(CMD_LCD_MODE,0x40); // Y = 0
+ 418:	80 e0       	ldi	r24, 0x00	; 0
+ 41a:	60 e4       	ldi	r22, 0x40	; 64
+ 41c:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	nlcd_SendByte(CMD_LCD_MODE,0xB0);
+ 420:	80 e0       	ldi	r24, 0x00	; 0
+ 422:	60 eb       	ldi	r22, 0xB0	; 176
+ 424:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	nlcd_SendByte(CMD_LCD_MODE,0x10); // X = 0
+ 428:	80 e0       	ldi	r24, 0x00	; 0
+ 42a:	60 e1       	ldi	r22, 0x10	; 16
+ 42c:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	nlcd_SendByte(CMD_LCD_MODE,0x00);
+ 430:	80 e0       	ldi	r24, 0x00	; 0
+ 432:	60 e0       	ldi	r22, 0x00	; 0
+ 434:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+ 438:	c0 e0       	ldi	r28, 0x00	; 0
+ 43a:	d0 e0       	ldi	r29, 0x00	; 0
+	//nlcd_SendByte(CMD_LCD_MODE,0xAE); // disable display;
+	
+	for(i=0;i<864;i++) nlcd_SendByte(DATA_LCD_MODE,0x00);
+ 43c:	81 e0       	ldi	r24, 0x01	; 1
+ 43e:	60 e0       	ldi	r22, 0x00	; 0
+ 440:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+ 444:	21 96       	adiw	r28, 0x01	; 1
+ 446:	83 e0       	ldi	r24, 0x03	; 3
+ 448:	c0 36       	cpi	r28, 0x60	; 96
+ 44a:	d8 07       	cpc	r29, r24
+ 44c:	b9 f7       	brne	.-18     	; 0x43c <nlcd_Clear+0x28>
+	
+	//nlcd_SendByte(CMD_LCD_MODE,0x07);
+	//nlcd_SendByte(CMD_LCD_MODE,0xAF); // enable display;
+}
+ 44e:	df 91       	pop	r29
+ 450:	cf 91       	pop	r28
+ 452:	08 95       	ret
+
+00000454 <nlcd_Init>:
+//******************************************************************************
+// Initialize the controller
+void nlcd_Init(void)
+{	
+	// Initialize the port to output for use with LCD-controller
+	DDR_LCD |= (1<<SCLK_LCD_PIN)|(1<<SDA_LCD_PIN)|(1<<CS_LCD_PIN)|(1<<RST_LCD_PIN);
+ 454:	84 b3       	in	r24, 0x14	; 20
+ 456:	80 6f       	ori	r24, 0xF0	; 240
+ 458:	84 bb       	out	0x14, r24	; 20
+
+	CS_LCD_RESET;
+ 45a:	ae 98       	cbi	0x15, 6	; 21
+	RST_LCD_RESET;
+ 45c:	af 98       	cbi	0x15, 7	; 21
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+ 45e:	82 ee       	ldi	r24, 0xE2	; 226
+ 460:	94 e0       	ldi	r25, 0x04	; 4
+ 462:	01 97       	sbiw	r24, 0x01	; 1
+ 464:	f1 f7       	brne	.-4      	; 0x462 <nlcd_Init+0xe>
+
+	_delay_ms(5);            // Waiting for at least 5ms to install the generator (less than 5 ms can be broken)
+
+	RST_LCD_SET;
+ 466:	af 9a       	sbi	0x15, 7	; 21
+
+	nlcd_SendByte(CMD_LCD_MODE,0xE2); // *** SOFTWARE RESET 
+ 468:	80 e0       	ldi	r24, 0x00	; 0
+ 46a:	62 ee       	ldi	r22, 0xE2	; 226
+ 46c:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+
+	nlcd_SendByte(CMD_LCD_MODE,0x3A); // *** Use internal oscillator
+ 470:	80 e0       	ldi	r24, 0x00	; 0
+ 472:	6a e3       	ldi	r22, 0x3A	; 58
+ 474:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	nlcd_SendByte(CMD_LCD_MODE,0xEF); // *** FRAME FREQUENCY:
+ 478:	80 e0       	ldi	r24, 0x00	; 0
+ 47a:	6f ee       	ldi	r22, 0xEF	; 239
+ 47c:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	nlcd_SendByte(CMD_LCD_MODE,0x04); // *** 80Hz
+ 480:	80 e0       	ldi	r24, 0x00	; 0
+ 482:	64 e0       	ldi	r22, 0x04	; 4
+ 484:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	nlcd_SendByte(CMD_LCD_MODE,0xD0); // *** 1:65 divider
+ 488:	80 e0       	ldi	r24, 0x00	; 0
+ 48a:	60 ed       	ldi	r22, 0xD0	; 208
+ 48c:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	
+	nlcd_SendByte(CMD_LCD_MODE,0x20); // Write to the register Vop
+ 490:	80 e0       	ldi	r24, 0x00	; 0
+ 492:	60 e2       	ldi	r22, 0x20	; 32
+ 494:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	nlcd_SendByte(CMD_LCD_MODE,0x90);
+ 498:	80 e0       	ldi	r24, 0x00	; 0
+ 49a:	60 e9       	ldi	r22, 0x90	; 144
+ 49c:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+
+	nlcd_SendByte(CMD_LCD_MODE,0xA4); // all on/normal display
+ 4a0:	80 e0       	ldi	r24, 0x00	; 0
+ 4a2:	64 ea       	ldi	r22, 0xA4	; 164
+ 4a4:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+
+	nlcd_SendByte(CMD_LCD_MODE,0x2F); // Power control set(charge pump on/off)
+ 4a8:	80 e0       	ldi	r24, 0x00	; 0
+ 4aa:	6f e2       	ldi	r22, 0x2F	; 47
+ 4ac:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+									  // Defines the contrast
+
+	nlcd_SendByte(CMD_LCD_MODE,0x40); // set start row address = 0
+ 4b0:	80 e0       	ldi	r24, 0x00	; 0
+ 4b2:	60 e4       	ldi	r22, 0x40	; 64
+ 4b4:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	nlcd_SendByte(CMD_LCD_MODE,0xB0); // Set the Y-address = 0
+ 4b8:	80 e0       	ldi	r24, 0x00	; 0
+ 4ba:	60 eb       	ldi	r22, 0xB0	; 176
+ 4bc:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	nlcd_SendByte(CMD_LCD_MODE,0x10); // Set the X-address, 3-bit older
+ 4c0:	80 e0       	ldi	r24, 0x00	; 0
+ 4c2:	60 e1       	ldi	r22, 0x10	; 16
+ 4c4:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	nlcd_SendByte(CMD_LCD_MODE,0x0);  // Set the X-address, the lower 4 bits
+ 4c8:	80 e0       	ldi	r24, 0x00	; 0
+ 4ca:	60 e0       	ldi	r22, 0x00	; 0
+ 4cc:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+
+	//nlcd_SendByte(CMD_LCD_MODE,0xC8); // mirror Y axis (about X axis)
+	//nlcd_SendByte(CMD_LCD_MODE,0xA1); // Invert the screen horizontally
+
+
+	nlcd_SendByte(CMD_LCD_MODE,0xAC); // set initial row (R0) of the display
+ 4d0:	80 e0       	ldi	r24, 0x00	; 0
+ 4d2:	6c ea       	ldi	r22, 0xAC	; 172
+ 4d4:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	nlcd_SendByte(CMD_LCD_MODE,0x07);
+ 4d8:	80 e0       	ldi	r24, 0x00	; 0
+ 4da:	67 e0       	ldi	r22, 0x07	; 7
+ 4dc:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+
+	//nlcd_SendByte(CMD_LCD_MODE,0xF9); //
+
+	nlcd_SendByte(CMD_LCD_MODE,0xAF); // Display on / off
+ 4e0:	80 e0       	ldi	r24, 0x00	; 0
+ 4e2:	6f ea       	ldi	r22, 0xAF	; 175
+ 4e4:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+
+	nlcd_Clear(); // clear LCD
+ 4e8:	0e 94 0a 02 	call	0x414	; 0x414 <nlcd_Clear>
+}
+ 4ec:	08 95       	ret
+
+000004ee <nlcd_Putc>:
+
+// ************************************************ ******************************
+// Display the symbol on the LCD-controller in the current place
+// C: character code
+void nlcd_Putc(unsigned char c)
+{
+ 4ee:	0f 93       	push	r16
+ 4f0:	1f 93       	push	r17
+ 4f2:	cf 93       	push	r28
+ 4f4:	df 93       	push	r29
+ 4f6:	98 2f       	mov	r25, r24
+	unsigned char i;
+	if (c>127) c=c-64; 	// We transfer Cyrillic characters encoded at the beginning of the second CP1251
+ 4f8:	87 fd       	sbrc	r24, 7
+ 4fa:	90 54       	subi	r25, 0x40	; 64
+						// Half of the table ASCII (starting with the code 0x80)
+	
+	for (i = 0; i < 5; i++ )
+	{
+    	nlcd_SendByte(DATA_LCD_MODE,pgm_read_byte(&(nlcd_Font[c-32][i])));
+ 4fc:	85 e0       	ldi	r24, 0x05	; 5
+ 4fe:	98 9f       	mul	r25, r24
+ 500:	c0 01       	movw	r24, r0
+ 502:	11 24       	eor	r1, r1
+ 504:	ec 01       	movw	r28, r24
+ 506:	c4 51       	subi	r28, 0x14	; 20
+ 508:	d0 40       	sbci	r29, 0x00	; 0
+{
+	unsigned char i;
+	if (c>127) c=c-64; 	// We transfer Cyrillic characters encoded at the beginning of the second CP1251
+						// Half of the table ASCII (starting with the code 0x80)
+	
+	for (i = 0; i < 5; i++ )
+ 50a:	8c 01       	movw	r16, r24
+ 50c:	0b 59       	subi	r16, 0x9B	; 155
+ 50e:	10 40       	sbci	r17, 0x00	; 0
+ 510:	04 57       	subi	r16, 0x74	; 116
+ 512:	1f 4f       	sbci	r17, 0xFF	; 255
+	{
+    	nlcd_SendByte(DATA_LCD_MODE,pgm_read_byte(&(nlcd_Font[c-32][i])));
+ 514:	fe 01       	movw	r30, r28
+ 516:	64 91       	lpm	r22, Z+
+ 518:	81 e0       	ldi	r24, 0x01	; 1
+ 51a:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+ 51e:	21 96       	adiw	r28, 0x01	; 1
+{
+	unsigned char i;
+	if (c>127) c=c-64; 	// We transfer Cyrillic characters encoded at the beginning of the second CP1251
+						// Half of the table ASCII (starting with the code 0x80)
+	
+	for (i = 0; i < 5; i++ )
+ 520:	c0 17       	cp	r28, r16
+ 522:	d1 07       	cpc	r29, r17
+ 524:	b9 f7       	brne	.-18     	; 0x514 <nlcd_Putc+0x26>
+	{
+    	nlcd_SendByte(DATA_LCD_MODE,pgm_read_byte(&(nlcd_Font[c-32][i])));
+    }
+    
+	nlcd_SendByte(DATA_LCD_MODE,0x00); // The gap between characters in the horizontal 1 pixel
+ 526:	81 e0       	ldi	r24, 0x01	; 1
+ 528:	60 e0       	ldi	r22, 0x00	; 0
+ 52a:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+}
+ 52e:	df 91       	pop	r29
+ 530:	cf 91       	pop	r28
+ 532:	1f 91       	pop	r17
+ 534:	0f 91       	pop	r16
+ 536:	08 95       	ret
+
+00000538 <nlcd_PutcWide>:
+
+// ************************************************ ******************************
+// Display a wide character LCD-screen NOKIA 1100 in the current place
+// C: character code
+void nlcd_PutcWide(unsigned char c)
+{
+ 538:	ef 92       	push	r14
+ 53a:	ff 92       	push	r15
+ 53c:	1f 93       	push	r17
+ 53e:	cf 93       	push	r28
+ 540:	df 93       	push	r29
+ 542:	98 2f       	mov	r25, r24
+	unsigned char i;
+	if (c>127) c=c-64; 	// We transfer Cyrillic characters encoded at the beginning of the second CP1251
+ 544:	87 fd       	sbrc	r24, 7
+ 546:	90 54       	subi	r25, 0x40	; 64
+						// Half of the table ASCII (starting with the code 0x80)
+
+	for (i = 0; i < 5; i++ )
+	{
+		unsigned char glyph = pgm_read_byte(&(nlcd_Font[c-32][i]));
+ 548:	85 e0       	ldi	r24, 0x05	; 5
+ 54a:	98 9f       	mul	r25, r24
+ 54c:	c0 01       	movw	r24, r0
+ 54e:	11 24       	eor	r1, r1
+ 550:	ec 01       	movw	r28, r24
+ 552:	c4 51       	subi	r28, 0x14	; 20
+ 554:	d0 40       	sbci	r29, 0x00	; 0
+{
+	unsigned char i;
+	if (c>127) c=c-64; 	// We transfer Cyrillic characters encoded at the beginning of the second CP1251
+						// Half of the table ASCII (starting with the code 0x80)
+
+	for (i = 0; i < 5; i++ )
+ 556:	25 e6       	ldi	r18, 0x65	; 101
+ 558:	e2 2e       	mov	r14, r18
+ 55a:	2f ef       	ldi	r18, 0xFF	; 255
+ 55c:	f2 2e       	mov	r15, r18
+ 55e:	e8 0e       	add	r14, r24
+ 560:	f9 1e       	adc	r15, r25
+ 562:	8c e8       	ldi	r24, 0x8C	; 140
+ 564:	90 e0       	ldi	r25, 0x00	; 0
+ 566:	e8 0e       	add	r14, r24
+ 568:	f9 1e       	adc	r15, r25
+	{
+		unsigned char glyph = pgm_read_byte(&(nlcd_Font[c-32][i]));
+ 56a:	fe 01       	movw	r30, r28
+ 56c:	14 91       	lpm	r17, Z+
+	   	nlcd_SendByte(DATA_LCD_MODE,glyph);
+ 56e:	81 e0       	ldi	r24, 0x01	; 1
+ 570:	61 2f       	mov	r22, r17
+ 572:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+	   	nlcd_SendByte(DATA_LCD_MODE,glyph);
+ 576:	81 e0       	ldi	r24, 0x01	; 1
+ 578:	61 2f       	mov	r22, r17
+ 57a:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+ 57e:	21 96       	adiw	r28, 0x01	; 1
+{
+	unsigned char i;
+	if (c>127) c=c-64; 	// We transfer Cyrillic characters encoded at the beginning of the second CP1251
+						// Half of the table ASCII (starting with the code 0x80)
+
+	for (i = 0; i < 5; i++ )
+ 580:	ce 15       	cp	r28, r14
+ 582:	df 05       	cpc	r29, r15
+ 584:	91 f7       	brne	.-28     	; 0x56a <nlcd_PutcWide+0x32>
+		unsigned char glyph = pgm_read_byte(&(nlcd_Font[c-32][i]));
+	   	nlcd_SendByte(DATA_LCD_MODE,glyph);
+	   	nlcd_SendByte(DATA_LCD_MODE,glyph);
+    }
+    
+	nlcd_SendByte(DATA_LCD_MODE,0x00); // The gap between characters in the horizontal 1 pixel
+ 586:	81 e0       	ldi	r24, 0x01	; 1
+ 588:	60 e0       	ldi	r22, 0x00	; 0
+ 58a:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+//	nlcd_SendByte(DATA_LCD_MODE,0x00); // You can make two lines
+}
+ 58e:	df 91       	pop	r29
+ 590:	cf 91       	pop	r28
+ 592:	1f 91       	pop	r17
+ 594:	ff 90       	pop	r15
+ 596:	ef 90       	pop	r14
+ 598:	08 95       	ret
+
+0000059a <nlcd_Print>:
+// ************************************************ ******************************
+// Display the string of characters on the LCD-controller in the current location. If the line comes out
+// Of the screen in the current line, the balance is transferred to the next line.
+// Message: a pointer to a character string. 0x00 - a sign of the end of the line.
+void nlcd_Print(char * message)
+{
+ 59a:	cf 93       	push	r28
+ 59c:	df 93       	push	r29
+ 59e:	ec 01       	movw	r28, r24
+ 5a0:	03 c0       	rjmp	.+6      	; 0x5a8 <nlcd_Print+0xe>
+	while (*message) /// End of line marked zero
+	{ 
+    	nlcd_Putc(*message++);
+ 5a2:	21 96       	adiw	r28, 0x01	; 1
+ 5a4:	0e 94 77 02 	call	0x4ee	; 0x4ee <nlcd_Putc>
+// Display the string of characters on the LCD-controller in the current location. If the line comes out
+// Of the screen in the current line, the balance is transferred to the next line.
+// Message: a pointer to a character string. 0x00 - a sign of the end of the line.
+void nlcd_Print(char * message)
+{
+	while (*message) /// End of line marked zero
+ 5a8:	88 81       	ld	r24, Y
+ 5aa:	88 23       	and	r24, r24
+ 5ac:	d1 f7       	brne	.-12     	; 0x5a2 <nlcd_Print+0x8>
+	{ 
+    	nlcd_Putc(*message++);
+    }
+}
+ 5ae:	df 91       	pop	r29
+ 5b0:	cf 91       	pop	r28
+ 5b2:	08 95       	ret
+
+000005b4 <nlcd_PrintF>:
+// ************************************************ ******************************
+// Display the string of characters on the LCD-controller in the current location of the program memory.
+// If the string is out of the screen in the current line, the balance is transferred to the next line.
+// Message: a pointer to a string in program memory. 0x00 - a sign of the end of the line.
+void nlcd_PrintF(unsigned char * message)
+{
+ 5b4:	cf 93       	push	r28
+ 5b6:	df 93       	push	r29
+ 5b8:	ec 01       	movw	r28, r24
+ 5ba:	03 c0       	rjmp	.+6      	; 0x5c2 <nlcd_PrintF+0xe>
+	unsigned char data;
+	while (data=pgm_read_byte(message), data)
+	{ 
+    	nlcd_Putc(data);
+ 5bc:	0e 94 77 02 	call	0x4ee	; 0x4ee <nlcd_Putc>
+		message++;
+ 5c0:	21 96       	adiw	r28, 0x01	; 1
+// If the string is out of the screen in the current line, the balance is transferred to the next line.
+// Message: a pointer to a string in program memory. 0x00 - a sign of the end of the line.
+void nlcd_PrintF(unsigned char * message)
+{
+	unsigned char data;
+	while (data=pgm_read_byte(message), data)
+ 5c2:	fe 01       	movw	r30, r28
+ 5c4:	84 91       	lpm	r24, Z+
+ 5c6:	88 23       	and	r24, r24
+ 5c8:	c9 f7       	brne	.-14     	; 0x5bc <nlcd_PrintF+0x8>
+	{ 
+    	nlcd_Putc(data);
+		message++;
+    }
+}
+ 5ca:	df 91       	pop	r29
+ 5cc:	cf 91       	pop	r28
+ 5ce:	08 95       	ret
+
+000005d0 <nlcd_PrintWide>:
+// Display the string of characters double width on the LCD-screen NOKIA 1100 in the current place
+// Of RAM. If the line is outside the screen in the current row, then the residue was
+// On the next line.
+// Message: a pointer to a string in program memory. 0x00 - a sign of the end of the line.
+void nlcd_PrintWide(unsigned char * message)
+{
+ 5d0:	cf 93       	push	r28
+ 5d2:	df 93       	push	r29
+ 5d4:	ec 01       	movw	r28, r24
+ 5d6:	03 c0       	rjmp	.+6      	; 0x5de <nlcd_PrintWide+0xe>
+	while (*message) nlcd_PutcWide(*message++);  // ????? ?????? ????????? ?????
+ 5d8:	21 96       	adiw	r28, 0x01	; 1
+ 5da:	0e 94 9c 02 	call	0x538	; 0x538 <nlcd_PutcWide>
+ 5de:	88 81       	ld	r24, Y
+ 5e0:	88 23       	and	r24, r24
+ 5e2:	d1 f7       	brne	.-12     	; 0x5d8 <nlcd_PrintWide+0x8>
+}
+ 5e4:	df 91       	pop	r29
+ 5e6:	cf 91       	pop	r28
+ 5e8:	08 95       	ret
+
+000005ea <nlcd_GotoXY>:
+// Set the cursor to the desired position. Counting starts at the top
+// Left. 16 character horizontally, vertically - 8
+// X: 0..15
+// Y: 0..7
+void nlcd_GotoXY(char x,char y)
+{
+ 5ea:	1f 93       	push	r17
+	x=x*6;	// ????????? ?? ?????????? ? ???????? ? ??????????? ? ???????????
+ 5ec:	96 e0       	ldi	r25, 0x06	; 6
+ 5ee:	89 9f       	mul	r24, r25
+ 5f0:	10 2d       	mov	r17, r0
+ 5f2:	11 24       	eor	r1, r1
+	nlcd_SendByte(CMD_LCD_MODE,(0xB0|(y&0x0F)));      // ????????? ?????? ?? Y: 0100 yyyy         
+ 5f4:	6f 70       	andi	r22, 0x0F	; 15
+ 5f6:	60 6b       	ori	r22, 0xB0	; 176
+ 5f8:	80 e0       	ldi	r24, 0x00	; 0
+ 5fa:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+    nlcd_SendByte(CMD_LCD_MODE,(0x00|(x&0x0F)));      // ????????? ?????? ?? X: 0000 xxxx - ???? (x3 x2 x1 x0)
+ 5fe:	61 2f       	mov	r22, r17
+ 600:	6f 70       	andi	r22, 0x0F	; 15
+ 602:	80 e0       	ldi	r24, 0x00	; 0
+ 604:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+    nlcd_SendByte(CMD_LCD_MODE,(0x10|((x>>4)&0x07))); // ????????? ?????? ?? X: 0010 0xxx - ???? (x6 x5 x4)
+ 608:	12 95       	swap	r17
+ 60a:	17 70       	andi	r17, 0x07	; 7
+ 60c:	10 61       	ori	r17, 0x10	; 16
+ 60e:	80 e0       	ldi	r24, 0x00	; 0
+ 610:	61 2f       	mov	r22, r17
+ 612:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+
+}
+ 616:	1f 91       	pop	r17
+ 618:	08 95       	ret
+
+0000061a <nlcd_Inverse>:
+// ************************************************ ******************************
+// Ustanavlivaer inversion mode the whole screen. A screen is not changed, only the inverted
+// Mode: INV_MODE_ON or INV_MODE_OFF
+void nlcd_Inverse(unsigned char mode)
+{
+	if (mode) nlcd_SendByte(CMD_LCD_MODE,0xA6);
+ 61a:	88 23       	and	r24, r24
+ 61c:	19 f0       	breq	.+6      	; 0x624 <nlcd_Inverse+0xa>
+ 61e:	80 e0       	ldi	r24, 0x00	; 0
+ 620:	66 ea       	ldi	r22, 0xA6	; 166
+ 622:	02 c0       	rjmp	.+4      	; 0x628 <nlcd_Inverse+0xe>
+	 else nlcd_SendByte(CMD_LCD_MODE,0xA7);
+ 624:	80 e0       	ldi	r24, 0x00	; 0
+ 626:	67 ea       	ldi	r22, 0xA7	; 167
+ 628:	0e 94 ef 01 	call	0x3de	; 0x3de <nlcd_SendByte>
+ 62c:	08 95       	ret
+
+0000062e <main>:
+}
+
+int main (void){
+ 62e:	0f 93       	push	r16
+ 630:	1f 93       	push	r17
+nlcd_Init();
+ 632:	0e 94 2a 02 	call	0x454	; 0x454 <nlcd_Init>
+nlcd_Print("sss");
+ 636:	80 e0       	ldi	r24, 0x00	; 0
+ 638:	91 e0       	ldi	r25, 0x01	; 1
+ 63a:	0e 94 cd 02 	call	0x59a	; 0x59a <nlcd_Print>
+nlcd_GotoXY(22,22);
+ 63e:	86 e1       	ldi	r24, 0x16	; 22
+ 640:	66 e1       	ldi	r22, 0x16	; 22
+ 642:	0e 94 f5 02 	call	0x5ea	; 0x5ea <nlcd_GotoXY>
+nlcd_Print("Www.Elasa.ir");
+ 646:	04 e0       	ldi	r16, 0x04	; 4
+ 648:	11 e0       	ldi	r17, 0x01	; 1
+ 64a:	c8 01       	movw	r24, r16
+ 64c:	0e 94 cd 02 	call	0x59a	; 0x59a <nlcd_Print>
+nlcd_GotoXY(11,11);
+ 650:	8b e0       	ldi	r24, 0x0B	; 11
+ 652:	6b e0       	ldi	r22, 0x0B	; 11
+ 654:	0e 94 f5 02 	call	0x5ea	; 0x5ea <nlcd_GotoXY>
+nlcd_Print("Www.Elasa.ir");
+ 658:	c8 01       	movw	r24, r16
+ 65a:	0e 94 cd 02 	call	0x59a	; 0x59a <nlcd_Print>
+//nlcd_PrintWide("Www.Elasa.ir");
+
+//nlcd_PrintF('testttttttt');
+//nlcd_Clear();
+}
+ 65e:	80 e0       	ldi	r24, 0x00	; 0
+ 660:	90 e0       	ldi	r25, 0x00	; 0
+ 662:	1f 91       	pop	r17
+ 664:	0f 91       	pop	r16
+ 666:	08 95       	ret
+
+00000668 <_exit>:
+ 668:	f8 94       	cli
+
+0000066a <__stop_program>:
+ 66a:	ff cf       	rjmp	.-2      	; 0x66a <__stop_program>
